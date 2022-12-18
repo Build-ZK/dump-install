@@ -52,3 +52,4 @@ sudo cp .zshrc /etc/zsh/zshrc
 ### CODING-STYLE-CHECKER ###
 
 sudo cp coding-style.sh /usr/bin/coding-style
+sudo chmod +x coding-style
