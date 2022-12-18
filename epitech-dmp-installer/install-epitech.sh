@@ -8,7 +8,7 @@ sudo apt install git
 
 ### BOOT MENU ###
 
-sudo cp -r themes/ /boot/themes/
+sudo cp -r themes/ /boot/grub/themes/
 #edit /etc/default/grub and add this line GRUB_THEME=/boot/grub/themes/kali/theme.txt
 
 ### GCC ###
