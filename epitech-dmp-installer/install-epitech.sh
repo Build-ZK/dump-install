@@ -49,6 +49,9 @@ sudo apt install libcsfml-dev
 ### ZSH ###
 
 sudo apt install zsh
+sudo apt install zsh-syntax-highlighting
+sudo apt install zsh-autosuggestions
+sudo apt install zsh-common
 sudo cp .zshrc /etc/zsh/zshrc
 sudo cp .zshrc $HOME/.zshrc
 
