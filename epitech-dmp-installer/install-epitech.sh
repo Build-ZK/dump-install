@@ -4,6 +4,7 @@
 
 sudo apt update && upgrade
 sudo apt install curl
+sudo apt install git
 
 ### BOOT MENU ###
 
