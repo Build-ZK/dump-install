@@ -50,6 +50,7 @@ sudo apt install libcsfml-dev
 
 sudo apt install zsh
 sudo cp .zshrc /etc/zsh/zshrc
+sudo cp .zshrc $HOME/.zshrc
 
 ### CODING-STYLE-CHECKER ###
 
