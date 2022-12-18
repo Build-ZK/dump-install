@@ -5,6 +5,7 @@
 sudo apt update && upgrade
 sudo apt install curl
 sudo apt install git
+sudo apt install make
 
 ### BOOT MENU ###
 
