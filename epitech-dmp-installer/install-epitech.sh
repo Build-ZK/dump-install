@@ -7,6 +7,7 @@ sudo apt install curl
 sudo apt install git
 sudo apt install make
 sudo apt install terminator
+sudo apt install tree
 
 ### BOOT MENU ###
 
