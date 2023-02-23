@@ -11,7 +11,7 @@ sudo apt install tree
 
 ### BOOT MENU ###
 
-sudo cp -r themes/ /boot/grub/themes/
+sudo cp -r themes/ /boot/grub/
 #edit /etc/default/grub and add this line GRUB_THEME=/boot/grub/themes/kali/theme.txt
 
 ### GCC ###
