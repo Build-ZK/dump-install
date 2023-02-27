@@ -62,5 +62,5 @@ sudo cp .zshrc $HOME/.zshrc
 
 sudo apt install docker
 sudo apt install docker-compose
-sudo cp coding-style.sh /usr/bin/coding-style
 sudo chmod +x coding-style
+sudo cp coding-style.sh /usr/bin/coding-style
