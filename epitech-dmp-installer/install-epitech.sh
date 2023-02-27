@@ -13,11 +13,6 @@ sudo apt install valgrind
 sudo apt install libncurses6
 sudo apt install libcsfml-dev
 
-### BOOT MENU ###
-
-sudo cp -r themes/ /boot/grub/
-sudo cp grub /etc/default/grub
-
 ### EMACS ###
 
 sudo apt install emacs
@@ -52,3 +47,9 @@ sudo apt install docker
 sudo apt install docker-compose
 sudo chmod +x coding-style
 sudo cp coding-style.sh /usr/bin/coding-style
+
+### BOOT MENU ###
+
+sudo cp -r themes/ /boot/grub/
+sudo cp grub /etc/default/grub
+sudo grub-update
