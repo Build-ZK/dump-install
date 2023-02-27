@@ -8,19 +8,15 @@ sudo apt install git
 sudo apt install make
 sudo apt install terminator
 sudo apt install tree
+sudo apt install gcc
+sudo apt install valgrind
+sudo apt install libncurses6
+sudo apt install libcsfml-dev
 
 ### BOOT MENU ###
 
 sudo cp -r themes/ /boot/grub/
 sudo cp grub /etc/default/grub
-
-### GCC ###
-
-sudo apt install gcc
-
-### VALGRIND ###
-
-sudo apt install valgrind
 
 ### EMACS ###
 
@@ -40,14 +36,6 @@ sudo cp -r criterion-2.4.0/* /usr/local/
 sudo echo "/usr/local/lib" > /etc/ld.so.conf.d/usr-local.conf
 sudo ldconfig
 sudo rm -rf criterion-2.4.0.tar.xz criterion-2.4.0/
-
-### NCURSES ###
-
-sudo apt install libncurses6
-
-### CSFML ###
-
-sudo apt install libcsfml-dev
 
 ### ZSH ###
 
