@@ -19,6 +19,8 @@ sudo apt -y install gcc
 echo "gcc installed."
 sudo apt -y install valgrind
 echo "valgrind installed."
+sudo apt -y install neofetch
+echo "neofetch installed."
 
 ### LIB ###
 sudo apt -y install libncurses6
@@ -32,7 +34,7 @@ echo "emacs installed."
 sudo git clone https://github.com/Epitech/epitech-emacs.git
 cd epitech-emacs
 sudo git checkout 278bb6a630e6474f99028a8ee1a5c763e943d9a3
-./INSTALL.sh system
+./INSTALL.sh local
 echo "Epitech Emacs installed."
 cd .. && sudo rm -rf epitech-emacs
 
@@ -50,8 +52,8 @@ sudo apt -y install docker
 echo "docker installed."
 sudo apt -y install docker-compose
 echo "docker-compose installed."
-sudo chmod +x coding-style
 sudo cp coding-style.sh /usr/bin/coding-style
+sudo chmod +x /usr/bin/coding-style
 echo "coding-style-checker installed."
 
 ### ZSH ###
@@ -85,6 +87,21 @@ if [[ "$grub" == "y" ]]; then
     echo "GRUB updated."
 else
     echo "grub aborted"
+fi
+
+### SSH-KEY ###
+echo "Do you want to generate ssh key ? (y/n)"
+read ssh_key
+echo "Your email : "
+read email
+if [[ "$ssh_key" == "y" ]]; then
+    ssh-keygen -t ed25519 -C "$email"
+    echo "SSH key generated."
+    echo "Your public key : (copy it and paste it in your github account)"
+    cat ~/.ssh/id_ed25519.pub
+    sleep 10
+else
+    echo "ssh key aborted"
 fi
 
 echo "Installation completed!"
