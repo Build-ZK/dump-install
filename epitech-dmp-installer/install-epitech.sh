@@ -92,9 +92,9 @@ fi
 ### SSH-KEY ###
 echo "Do you want to generate ssh key ? (y/n)"
 read ssh_key
-echo "Your email : "
-read email
 if [[ "$ssh_key" == "y" ]]; then
+    echo "Your email : "
+    read email
     ssh-keygen -t ed25519 -C "$email"
     echo "SSH key generated."
     echo "Your public key : (copy it and paste it in your github account)"
