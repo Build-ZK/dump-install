@@ -7,6 +7,8 @@ sudo apt update && sudo apt -y upgrade
 echo "Packages updated."
 sudo apt -y install curl
 echo "curl installed."
+sudo apt -y install wget
+echo "wget installed."
 sudo apt -y install git
 echo "git installed."
 sudo apt -y install make
@@ -57,7 +59,7 @@ sudo chmod +x /usr/bin/coding-style
 echo "coding-style-checker installed."
 
 ### ZSH ###
-echo "Do you want to install zsh ? (y/n)"
+echo "Do you want to install zsh and my config ? (y/n)"
 read install_zsh
 if [[ "$install_zsh" == "y" ]]; then
     sudo apt -y install zsh
@@ -68,6 +70,7 @@ if [[ "$install_zsh" == "y" ]]; then
     echo "zsh-autosuggestions installed."
     sudo apt -y install zsh-common
     echo "zsh-common installed."
+    sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     sudo cp .zshrc /etc/zsh/zshrc
     sudo cp .zshrc $HOME/.zshrc
     echo "zsh configurations copied."
