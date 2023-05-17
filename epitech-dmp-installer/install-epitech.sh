@@ -72,7 +72,27 @@ if [[ "$install_zsh" == "y" ]]; then
     echo "zsh-common installed."
     sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     sudo cp zk.zsh-theme $HOME/.oh-my-zsh/themes/
+    sed -i 's/^ZSH_THEME=.*/ZSH_THEME="zk"/' ~/.zshrc
     echo "zsh configurations copied."
+    echo "Do you want to import your aliases ? (y/n)"
+    read answer
+    if [[ "$answer" == "y" ]]; then
+        echo "Please specify the path of the alias file : "
+        read alias_file
+        if [ -f "$alias_file" ]; then
+            if grep -qE '^alias [a-zA-Z0-9_]+\=' "$alias_file"; then
+                sudo sh -c "echo '\n# Custom Aliases\n' >> $HOME/.oh-my-zsh/themes/zk.zsh-theme"
+                sudo sh -c "cat '$alias_file' >> $HOME/.oh-my-zsh/themes/zk.zsh-theme"
+                echo "Alias loaded."
+            else
+                echo  "The specified alias file does not contain valid aliases."
+            fi
+        else
+            echo "File not found."
+        fi
+    else
+        echo "alias aborted"
+    fi
 else
     echo "zsh aborted"
 fi

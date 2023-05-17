@@ -1,0 +1,6 @@
+alias enw='emacs -nw'
+alias zkbash='nano ~/.bashrc'
+alias cleaner='bash ~/Desktop/delivery/my-scripts/mr_clean_tmp.sh'
+alias createfile='bash ~/Desktop/delivery/my-scripts/create_file.sh'
+alias zkgit='bash ~/Desktop/delivery/my-scripts/script_git.sh'
+alias zkhelp='bash ~/Desktop/delivery/my-scripts/zkhelp.sh'
