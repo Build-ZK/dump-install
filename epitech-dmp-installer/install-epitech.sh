@@ -59,7 +59,7 @@ sudo chmod +x /usr/bin/coding-style
 echo "coding-style-checker installed."
 
 ### ZSH ###
-echo "Do you want to install zsh and my config ? (y/n)"
+echo "Do you want to install oh-my-zsh and my config ? (y/n)"
 read install_zsh
 if [[ "$install_zsh" == "y" ]]; then
     sudo apt -y install zsh
@@ -71,8 +71,7 @@ if [[ "$install_zsh" == "y" ]]; then
     sudo apt -y install zsh-common
     echo "zsh-common installed."
     sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    sudo cp .zshrc /etc/zsh/zshrc
-    sudo cp .zshrc $HOME/.zshrc
+    sudo cp zk.zsh-theme $HOME/.oh-my-zsh/themes/
     echo "zsh configurations copied."
 else
     echo "zsh aborted"
@@ -102,7 +101,7 @@ if [[ "$ssh_key" == "y" ]]; then
     echo "SSH key generated."
     echo "Your public key : (copy it and paste it in your github account)"
     cat ~/.ssh/id_ed25519.pub
-    sleep 10
+    sleep 15
 else
     echo "ssh key aborted"
 fi

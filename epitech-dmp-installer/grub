@@ -1,4 +1,4 @@
 GRUB_CMDLINE_LINUX_DEFAULT="splash quiet "
 GRUB_DEFAULT=0
 GRUB_THEME=/boot/grub/themes/kali/theme.txt
-GRUB_TIMEOUT=5
+GRUB_TIMEOUT=15
